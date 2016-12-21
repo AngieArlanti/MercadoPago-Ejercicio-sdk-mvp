@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MercadoPago-Ejercicio-sdk-MVP</string>
+    <string name="amount_button">Continuar</string>
+    <string name="amount_hint">Ingrese Monto</string>
 </resources>

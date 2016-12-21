@@ -3,11 +3,15 @@ package com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Main2Activity extends AppCompatActivity {
+import com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.view.PaymentMethodsView;
+
+public class PaymentMethodsActivity extends AppCompatActivity implements PaymentMethodsView {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.payment_methods_activity);
+
+
     }
 }
