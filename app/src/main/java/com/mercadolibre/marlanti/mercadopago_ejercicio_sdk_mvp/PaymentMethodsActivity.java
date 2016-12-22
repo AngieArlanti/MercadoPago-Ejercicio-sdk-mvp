@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.view.PaymentMethodsView;
 
-public class PaymentMethodsActivity extends AppCompatActivity implements PaymentMethodsView {
+public class PaymentMethodsActivity extends AppCompatActivity /*implements PaymentMethodsView*/ {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
