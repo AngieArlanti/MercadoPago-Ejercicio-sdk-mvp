@@ -1,4 +1,6 @@
-package com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.view;
+package com.mercadolibre.marlanti.px_android_mvp.sample.view;
+
+import com.mercadolibre.marlanti.px_android_mvp.mvp.View;
 
 import java.math.BigDecimal;
 
@@ -7,6 +9,6 @@ import java.math.BigDecimal;
  */
 public interface AmountView extends View {
 
-
     void startPaymentMethodsSelection(BigDecimal amount);
+
 }

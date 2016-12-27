@@ -3,5 +3,6 @@
     <string name="amount_button">Continuar</string>
     <string name="amount_hint">Ingrese Monto</string>
     <string name="error_invalid_amount">El monto es inválido</string>
+    <string name="error_connection">Error en la conexión</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp;
+package com.mercadolibre.marlanti.px_android_mvp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

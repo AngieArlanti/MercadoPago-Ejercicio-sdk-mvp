@@ -1,15 +1,16 @@
-package com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.interactor;
+package com.mercadolibre.marlanti.px_android_mvp.sample.interactor;
 
 import android.content.Context;
 
-import com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.R;
-import com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.manager.StringManager;
+import com.mercadolibre.marlanti.px_android_mvp.R;
+import com.mercadolibre.marlanti.px_android_mvp.sample.manager.StringManager;
+import com.mercadolibre.marlanti.px_android_mvp.mvp.Interactor;
 
 /**
  * Created by marlanti on 12/22/16.
  */
 
-public class AmountInteractor {
+public class AmountInteractor implements Interactor {
 
     private Context mContext;
     private StringManager stringManager;
@@ -21,8 +22,5 @@ public class AmountInteractor {
     public String getInvalidAmountMessage(){
         return mContext.getResources().getString(R.string.error_invalid_amount);
     }
-
-
-
 
 }

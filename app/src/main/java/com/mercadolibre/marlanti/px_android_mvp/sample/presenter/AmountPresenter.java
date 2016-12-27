@@ -1,7 +1,7 @@
-package com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.presenter;
+package com.mercadolibre.marlanti.px_android_mvp.sample.presenter;
 
-import com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.interactor.AmountInteractor;
-import com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.view.AmountView;
+import com.mercadolibre.marlanti.px_android_mvp.sample.interactor.AmountInteractor;
+import com.mercadolibre.marlanti.px_android_mvp.sample.view.AmountView;
 
 import java.math.BigDecimal;
 

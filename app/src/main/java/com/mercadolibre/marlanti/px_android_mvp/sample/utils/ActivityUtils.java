@@ -1,4 +1,4 @@
-package com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.utils;
+package com.mercadolibre.marlanti.px_android_mvp.sample.utils;
 
 /**
  * Created by marlanti on 12/22/16.

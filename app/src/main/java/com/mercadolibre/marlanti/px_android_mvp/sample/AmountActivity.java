@@ -1,4 +1,4 @@
-package com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp;
+package com.mercadolibre.marlanti.px_android_mvp.sample;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,30 +8,28 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.interactor.AmountInteractor;
-import com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.presenter.AmountPresenter;
-import com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.utils.ActivityUtils;
-import com.mercadolibre.marlanti.mercadopago_ejercicio_sdk_mvp.view.AmountView;
+import com.mercadolibre.marlanti.px_android_mvp.R;
+import com.mercadolibre.marlanti.px_android_mvp.sample.interactor.AmountInteractor;
+import com.mercadolibre.marlanti.px_android_mvp.sample.presenter.AmountPresenter;
+import com.mercadolibre.marlanti.px_android_mvp.sample.utils.ActivityUtils;
+import com.mercadolibre.marlanti.px_android_mvp.sample.view.AmountView;
 
 import java.math.BigDecimal;
 
 public class AmountActivity extends AppCompatActivity implements AmountView {
 
-    private final Button bAmount;
-    private final EditText etAmount;
+    private Button bAmount;
+    private EditText etAmount;
     private AmountPresenter mAmountPresenter;
 
-
-
-    public AmountActivity() {
-        bAmount = (Button) findViewById(R.id.amountButton);
-        etAmount = (EditText) findViewById(R.id.amountEditText);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_amount);
+
+        bAmount = (Button) findViewById(R.id.amountButton);
+        etAmount = (EditText) findViewById(R.id.amountEditText);
         AmountInteractor interactor = new AmountInteractor(this);
 
         mAmountPresenter = new AmountPresenter(interactor);
