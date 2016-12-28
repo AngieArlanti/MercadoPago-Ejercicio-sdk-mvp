@@ -10,5 +10,6 @@ import java.math.BigDecimal;
 public interface AmountView extends View {
 
     void startPaymentMethodsSelection(BigDecimal amount);
+    void showError(String msg);
 
 }

@@ -7,7 +7,7 @@ import java.util.List;
  * Created by marlanti on 12/27/16.
  */
 
-public interface DataSubscriber {
+public interface onResourcesRetrievedCallback {
     public <E> void  onSuccess(List<E> data);
     public void onFailure();
 }

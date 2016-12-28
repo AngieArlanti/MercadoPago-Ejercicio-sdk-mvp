@@ -1,6 +1,12 @@
 package com.mercadolibre.marlanti.px_android_mvp;
 
+import com.mercadolibre.marlanti.px_android_mvp.sample.presenter.PaymentMethodsPresenterImpl;
+import com.mercadolibre.marlanti.px_android_mvp.sample.view.PaymentMethodsView;
+import com.mercadopago.model.PaymentMethod;
+
 import org.junit.Test;
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -11,7 +17,36 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
     @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+    public void ifPaymentMethodPresenterCreatedGetPaymentMethods() throws Exception {
+        PaymentMethodsPresenterImpl presenter = new PaymentMethodsPresenterImpl();
+        MockedView mockedView = new MockedView();
+
+        presenter.attachView(mockedView);
+        presenter.attachInteractor(new MockedInteractor());
+
+        assertTrue(mockedView.paymentMethods.size() == 5);
+
+    }
+
+
+    private class MockedView implements PaymentMethodsView<PaymentMethod> {
+
+        public List<PaymentMethod> paymentMethods;
+
+        @Override
+        public void showPaymentMethodsList(List<PaymentMethod> data) {
+            paymentMethods = data;
+        }
+
+        @Override
+        public void showError(String message) {
+
+        }
+    }
+
+    private class MockedInteractor implements PaymentMethodsInteractor {
+        public void getPaymentMethods(Ca) {
+            return sarasa;
+        }
     }
 }

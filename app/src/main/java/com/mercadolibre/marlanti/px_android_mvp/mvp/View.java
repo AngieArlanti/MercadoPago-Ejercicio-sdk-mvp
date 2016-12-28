@@ -5,6 +5,4 @@ package com.mercadolibre.marlanti.px_android_mvp.mvp;
  */
 
 public interface View {
-    void showError(String message);
-
 }

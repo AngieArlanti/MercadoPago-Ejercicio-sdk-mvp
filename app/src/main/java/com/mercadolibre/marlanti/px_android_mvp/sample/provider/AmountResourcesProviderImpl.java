@@ -1,21 +1,21 @@
-package com.mercadolibre.marlanti.px_android_mvp.sample.interactor;
+package com.mercadolibre.marlanti.px_android_mvp.sample.provider;
 
 import android.content.Context;
 
 import com.mercadolibre.marlanti.px_android_mvp.R;
+import com.mercadolibre.marlanti.px_android_mvp.sample.interfaces.AmountResourcesProvider;
 import com.mercadolibre.marlanti.px_android_mvp.sample.manager.StringManager;
-import com.mercadolibre.marlanti.px_android_mvp.mvp.Interactor;
 
 /**
  * Created by marlanti on 12/22/16.
  */
 
-public class AmountInteractor implements Interactor {
+public class AmountResourcesProviderImpl implements AmountResourcesProvider {
 
     private Context mContext;
     private StringManager stringManager;
 
-    public AmountInteractor(final Context context) {
+    public AmountResourcesProviderImpl(final Context context) {
         this.mContext = context;
     }
 

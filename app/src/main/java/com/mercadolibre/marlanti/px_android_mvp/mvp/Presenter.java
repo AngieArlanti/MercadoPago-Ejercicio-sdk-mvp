@@ -6,17 +6,18 @@ import java.lang.ref.WeakReference;
  * Created by marlanti on 12/21/16.
  */
 
-public abstract class Presenter <V extends View, I extends Interactor >{
+public abstract class Presenter<V extends View, R extends ResourcesProvider> {
 
     private WeakReference<V> mView;
-    private  I interactor;
+    private R r;
 
-    protected void  attachView(final V view){
-        this.mView = new WeakReference<>(view);
+
+    public void attachResourcesProvider(final R r){
+        this.r = r;
     }
 
-    protected void attachInteractor(final I interactor){
-        this.interactor = interactor;
+    public void attachView(V view) {
+        this.mView = new WeakReference<>(view);
     }
 
     public boolean isViewAttached() {
@@ -27,9 +28,7 @@ public abstract class Presenter <V extends View, I extends Interactor >{
         return mView == null ? null : mView.get();
     }
 
-    public I getInteractor(){
-        return interactor;
+    public R getResourcesProvider(){
+        return r;
     }
-
-
 }

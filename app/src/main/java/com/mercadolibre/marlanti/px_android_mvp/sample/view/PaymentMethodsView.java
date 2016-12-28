@@ -11,4 +11,5 @@ import java.util.List;
 
 public interface PaymentMethodsView <E> extends View {
     public void showPaymentMethodsList(List<E> data);
+    void showError(String msg);
 }
