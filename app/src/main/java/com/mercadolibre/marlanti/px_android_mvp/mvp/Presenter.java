@@ -20,6 +20,13 @@ public abstract class Presenter<V extends View, R extends ResourcesProvider> {
         this.mView = new WeakReference<>(view);
     }
 
+    public void detachView() {
+        if (mView != null) {
+            mView.clear();
+            mView = null;
+        }
+    }
+
     public boolean isViewAttached() {
         return mView != null && mView.get() != null;
     }
@@ -32,6 +39,9 @@ public abstract class Presenter<V extends View, R extends ResourcesProvider> {
         return resourcesProvider;
     }
 }
+
+
+
 
 
 
