@@ -9,9 +9,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.mercadolibre.marlanti.px_android_mvp.R;
-import com.mercadolibre.marlanti.px_android_mvp.sample.interfaces.AmountPresenter;
 import com.mercadolibre.marlanti.px_android_mvp.sample.provider.AmountResourcesProviderImpl;
-import com.mercadolibre.marlanti.px_android_mvp.sample.presenter.AmountPresenterImpl;
+import com.mercadolibre.marlanti.px_android_mvp.sample.presenter.AmountPresenter;
 import com.mercadolibre.marlanti.px_android_mvp.sample.utils.ActivityUtils;
 import com.mercadolibre.marlanti.px_android_mvp.sample.view.AmountView;
 
@@ -21,7 +20,7 @@ public class AmountActivity extends AppCompatActivity implements AmountView {
 
     private Button bAmount;
     private EditText etAmount;
-    private AmountPresenterImpl mAmountPresenter;
+    private AmountPresenter mAmountPresenter;
 
 
     @Override
@@ -33,7 +32,7 @@ public class AmountActivity extends AppCompatActivity implements AmountView {
         etAmount = (EditText) findViewById(R.id.amountEditText);
         AmountResourcesProviderImpl resourcesProvider = new AmountResourcesProviderImpl(this);
 
-        mAmountPresenter = new AmountPresenterImpl();
+        mAmountPresenter = new AmountPresenter();
         mAmountPresenter.attachView(this);
         mAmountPresenter.attachResourcesProvider(resourcesProvider);
 

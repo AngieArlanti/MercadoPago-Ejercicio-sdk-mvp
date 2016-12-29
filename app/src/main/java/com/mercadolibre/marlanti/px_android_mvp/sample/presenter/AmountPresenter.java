@@ -1,7 +1,6 @@
 package com.mercadolibre.marlanti.px_android_mvp.sample.presenter;
 
 import com.mercadolibre.marlanti.px_android_mvp.mvp.Presenter;
-import com.mercadolibre.marlanti.px_android_mvp.sample.interfaces.AmountPresenter;
 import com.mercadolibre.marlanti.px_android_mvp.sample.interfaces.AmountResourcesProvider;
 import com.mercadolibre.marlanti.px_android_mvp.sample.view.AmountView;
 
@@ -10,7 +9,7 @@ import java.math.BigDecimal;
 /**
  * Created by marlanti on 12/22/16.
  */
-public class AmountPresenterImpl extends Presenter<AmountView,AmountResourcesProvider> implements AmountPresenter{
+public class AmountPresenter extends Presenter<AmountView,AmountResourcesProvider>{
 
 
     private BigDecimal mAmount;

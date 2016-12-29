@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.mercadolibre.marlanti.px_android_mvp.R;
 import com.mercadolibre.marlanti.px_android_mvp.sample.adapter.PaymentMethodArrayAdapter;
 import com.mercadolibre.marlanti.px_android_mvp.sample.provider.PaymentMethodsResourcesProviderImpl;
-import com.mercadolibre.marlanti.px_android_mvp.sample.presenter.PaymentMethodsPresenterImpl;
+import com.mercadolibre.marlanti.px_android_mvp.sample.presenter.PaymentMethodsPresenter;
 import com.mercadolibre.marlanti.px_android_mvp.sample.utils.ActivityUtils;
 import com.mercadolibre.marlanti.px_android_mvp.sample.view.PaymentMethodsView;
 
@@ -17,7 +17,7 @@ import java.util.List;
 
 public class PaymentMethodsActivity extends AppCompatActivity implements PaymentMethodsView {
 
-    private PaymentMethodsPresenterImpl mPresenter;
+    private PaymentMethodsPresenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class PaymentMethodsActivity extends AppCompatActivity implements Payment
         String amount = getIntent().getStringExtra(ActivityUtils.EXTRA_AMOUNT);
 
 
-        mPresenter = new PaymentMethodsPresenterImpl();
+        mPresenter = new PaymentMethodsPresenter();
         mPresenter.attachView(this);
 
         PaymentMethodsResourcesProviderImpl resourcesProvider = new PaymentMethodsResourcesProviderImpl(this);

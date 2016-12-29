@@ -1,6 +1,6 @@
 package com.mercadolibre.marlanti.px_android_mvp;
 
-import com.mercadolibre.marlanti.px_android_mvp.sample.presenter.PaymentMethodsPresenterImpl;
+import com.mercadolibre.marlanti.px_android_mvp.sample.presenter.PaymentMethodsPresenter;
 import com.mercadolibre.marlanti.px_android_mvp.sample.view.PaymentMethodsView;
 import com.mercadopago.model.PaymentMethod;
 
@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void ifPaymentMethodPresenterCreatedGetPaymentMethods() throws Exception {
-        PaymentMethodsPresenterImpl presenter = new PaymentMethodsPresenterImpl();
+        PaymentMethodsPresenter presenter = new PaymentMethodsPresenter();
         MockedView mockedView = new MockedView();
 
         presenter.attachView(mockedView);

@@ -11,7 +11,7 @@ import java.util.List;
  * Created by marlanti on 12/21/16.
  */
 
-public class PaymentMethodsPresenterImpl extends Presenter<PaymentMethodsView, PaymentMethodsResourcesProvider> {
+public class PaymentMethodsPresenter extends Presenter<PaymentMethodsView, PaymentMethodsResourcesProvider> {
 
 
     public void onCreate(){
