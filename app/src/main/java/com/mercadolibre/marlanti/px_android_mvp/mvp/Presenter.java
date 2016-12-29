@@ -3,7 +3,7 @@ package com.mercadolibre.marlanti.px_android_mvp.mvp;
 import java.lang.ref.WeakReference;
 
 /**
- * Base class for all Presenter implementations.
+ * Base class for all <code>Presenter</code> implementations.
  */
 
 public abstract class Presenter<V extends View, R extends ResourcesProvider> {
@@ -32,3 +32,8 @@ public abstract class Presenter<V extends View, R extends ResourcesProvider> {
         return resourcesProvider;
     }
 }
+
+
+
+
+

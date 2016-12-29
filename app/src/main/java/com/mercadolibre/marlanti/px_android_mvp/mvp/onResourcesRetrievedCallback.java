@@ -15,3 +15,8 @@ public interface OnResourcesRetrievedCallback {
     public <E> void  onSuccess(List<E> data);
     public void onFailure();
 }
+
+
+
+
+

@@ -3,6 +3,7 @@ package com.mercadolibre.marlanti.px_android_mvp.sample.provider;
 import android.content.Context;
 
 import com.mercadolibre.marlanti.px_android_mvp.R;
+import com.mercadolibre.marlanti.px_android_mvp.mvp.ResourcesProvider;
 import com.mercadolibre.marlanti.px_android_mvp.sample.interfaces.AmountResourcesProvider;
 import com.mercadolibre.marlanti.px_android_mvp.sample.manager.StringManager;
 
@@ -20,6 +21,8 @@ public class AmountResourcesProviderImpl implements AmountResourcesProvider {
     }
 
     public String getInvalidAmountMessage(){
+
+
         return mContext.getResources().getString(R.string.error_invalid_amount);
     }
 
