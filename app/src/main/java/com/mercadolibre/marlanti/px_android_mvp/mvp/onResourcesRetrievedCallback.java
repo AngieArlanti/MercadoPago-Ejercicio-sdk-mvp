@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * All ResourcesProvider implementations' methods containing api calls
- * SHOULD receive as @param an OnResourcesRetrievedCallback.
+ * SHOULD receive as @param an <code>OnResourcesRetrievedCallback</code>.
  *
  * See also {@link ResourcesProvider}
  */
