@@ -3,7 +3,7 @@ package com.mercadolibre.marlanti.px_android_mvp.sample.provider;
 import android.content.Context;
 
 import com.mercadolibre.marlanti.px_android_mvp.R;
-import com.mercadolibre.marlanti.px_android_mvp.mvp.onResourcesRetrievedCallback;
+import com.mercadolibre.marlanti.px_android_mvp.mvp.OnResourcesRetrievedCallback;
 
 import com.mercadolibre.marlanti.px_android_mvp.sample.interfaces.PaymentMethodsResourcesProvider;
 import com.mercadopago.callbacks.Callback;
@@ -25,13 +25,7 @@ public class PaymentMethodsResourcesProviderImpl implements PaymentMethodsResour
         this.mContext = mContext;
     }
 
-
-
-    public String getConnectionErrorMessage() {
-        return mContext.getResources().getString(R.string.error_connection);
-    }
-
-    public void getPaymentMethods(final onResourcesRetrievedCallback listener) {
+    public void getPaymentMethods(final OnResourcesRetrievedCallback listener) {
 
         MercadoPago mercadoPago = new MercadoPago.Builder()
                 .setContext(mContext)
@@ -53,4 +47,11 @@ public class PaymentMethodsResourcesProviderImpl implements PaymentMethodsResour
 
 
     }
+
+
+
+    public String getConnectionErrorMessage() {
+        return mContext.getResources().getString(R.string.error_connection);
+    }
+
 }

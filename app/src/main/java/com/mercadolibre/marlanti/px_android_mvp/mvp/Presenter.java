@@ -3,17 +3,17 @@ package com.mercadolibre.marlanti.px_android_mvp.mvp;
 import java.lang.ref.WeakReference;
 
 /**
- * Created by marlanti on 12/21/16.
+ * Base class for all Presenter implementations.
  */
 
 public abstract class Presenter<V extends View, R extends ResourcesProvider> {
 
     private WeakReference<V> mView;
-    private R r;
+    private R resourcesProvider;
 
 
-    public void attachResourcesProvider(final R r){
-        this.r = r;
+    public void attachResourcesProvider(final R resourcesProvider){
+        this.resourcesProvider = resourcesProvider;
     }
 
     public void attachView(V view) {
@@ -29,6 +29,6 @@ public abstract class Presenter<V extends View, R extends ResourcesProvider> {
     }
 
     public R getResourcesProvider(){
-        return r;
+        return resourcesProvider;
     }
 }

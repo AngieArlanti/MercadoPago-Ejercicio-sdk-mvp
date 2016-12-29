@@ -1,8 +1,12 @@
 package com.mercadolibre.marlanti.px_android_mvp.mvp;
 
 /**
- * Created by marlanti on 12/27/16.
+ * All Presenters should contain a ResourcesProvider.
+ *
+ * ResourcesProvider implementations should have resources getters
+ * which receive as param an OnResoucesRetrievedCallback.
  */
 
 public interface ResourcesProvider {
+
 }

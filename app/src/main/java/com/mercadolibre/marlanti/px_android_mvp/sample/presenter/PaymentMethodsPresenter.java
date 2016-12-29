@@ -1,7 +1,7 @@
 package com.mercadolibre.marlanti.px_android_mvp.sample.presenter;
 
 import com.mercadolibre.marlanti.px_android_mvp.mvp.Presenter;
-import com.mercadolibre.marlanti.px_android_mvp.mvp.onResourcesRetrievedCallback;
+import com.mercadolibre.marlanti.px_android_mvp.mvp.OnResourcesRetrievedCallback;
 import com.mercadolibre.marlanti.px_android_mvp.sample.interfaces.PaymentMethodsResourcesProvider;
 import com.mercadolibre.marlanti.px_android_mvp.sample.view.PaymentMethodsView;
 
@@ -15,7 +15,7 @@ public class PaymentMethodsPresenter extends Presenter<PaymentMethodsView, Payme
 
 
     public void onCreate(){
-        getResourcesProvider().getPaymentMethods(new onResourcesRetrievedCallback() {
+        getResourcesProvider().getPaymentMethods(new OnResourcesRetrievedCallback() {
 
             @Override
             public <E> void onSuccess(List<E> data) {
@@ -30,3 +30,5 @@ public class PaymentMethodsPresenter extends Presenter<PaymentMethodsView, Payme
     }
 
 }
+
+
